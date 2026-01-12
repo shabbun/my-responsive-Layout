@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Layout</title>
+    <style>
+    #container{
+        font: italic;
+        background-color:palegoldenrod;
+        color:red;
+    }
+    h2{
+        justify-items: center;
+        font: bold;
+    }
+
+        .container{
+            display: grid;
+            gap: 3px;
+            grid-template-columns: repeat(6,1fr);
+            grid-template-rows: 6,200px;
+        }
+         img{
+            width: 100%;
+            height: 100%;
+         }
+         .big-layout{
+            grid-column: span 6;
+            grid-row: span 2;
+         }
+         .normal-layout{
+            grid-column: span 2;
+            grid-row: span 2;
+         }
+        .small-layout{
+            grid-column: span 2;
+            grid-row: span 1;
+        }
+    
+         .wide-layout{
+            grid-column: span;
+            grid-row: span;
+         }
+         @media screen and (max-width:576px){
+          .container{
+            display: grid;
+            gap: 3px;
+            grid-template-columns: repeat(2, 1fr);
+            
+        }
+
+         .big-layout,
+         .normal-layout,
+         .small-layout, 
+         .wide-layout{
+            grid-row: span 1;
+            grid-column: span 1;
+
+        }
+         }
+         
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h2>My Dream Bangladesh</h2>
+    </div>
+   <div class="container">
+    <div class="big-layout">
+        <img src="images/A.avif" alt="">
+    </div>
+    <div class="normal-layout">
+        <img src="images/B.avif" alt="">
+    </div>
+    <div class="normal-layout">
+        <img src="images/C.avif" alt="">
+    </div>
+    <div class="small-layout">
+        <img src="images/D.avif" alt="">
+    </div>
+    <div class="small-layout">
+        <img src="images/E.avif" alt="">
+    </div>
+    <div class="normal-layout">
+        <img src="images/F.avif" alt="">
+    </div>
+    <div class="wide-layout">
+        <img src="images/G.avif" alt="">
+    </div>
+    <div class="wide-layout">
+        <img src="images/G.avif" alt="">
+    </div>
+    <div class="normal-layout">
+        <img src="images/I.avif" alt="">
+    </div> 
+    <div class="wide-layout">
+        <img src="images/G.avif" alt="">
+    </div>
+    <div class="wide-layout">
+        <img src="images/G.avif" alt="">
+    </div>
+   </div> 
+</body>
+</html>
